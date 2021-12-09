@@ -11,7 +11,6 @@
 namespace JustBlackBird\HandlebarsHelpers\Collection;
 
 use Handlebars\Context;
-use Handlebars\Helper as HelperInterface;
 use Handlebars\Template;
 
 /**
@@ -28,10 +27,17 @@ use Handlebars\Template;
  *
  * @author Dmitriy Simushev <simushevds@gmail.com>
  */
-class CountHelper implements HelperInterface
+class CountHelper
 {
     /**
-     * {@inheritdoc}
+     * Execute the helper
+     *
+     * @param \Handlebars\Template  $template The template instance
+     * @param \Handlebars\Context   $context  The current context
+     * @param \Handlebars\Arguments $args     The arguments passed the the helper
+     * @param string                $source   The source
+     *
+     * @return mixed
      */
     public function execute(Template $template, Context $context, $args, $source)
     {
